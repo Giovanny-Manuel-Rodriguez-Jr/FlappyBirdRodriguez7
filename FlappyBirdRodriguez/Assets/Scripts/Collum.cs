@@ -9,7 +9,7 @@ public class Collum : MonoBehaviour
     {
         if (other.GetComponent<AerialAssualtTrooper> () != null)
         {
-            GameControl.Instance.BirdScored();
+            GameControl.instance.BirdScored();
         }
            
 

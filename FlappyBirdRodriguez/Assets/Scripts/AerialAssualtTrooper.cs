@@ -35,6 +35,6 @@ public class AerialAssualtTrooper : MonoBehaviour
         rb2d.velocity = Vector2.zero;
         isDead = true;
         anim.SetTrigger("Die");
-        GameControl.Instance.BirdDied();
+        GameControl.instance.BirdDied();
     }
 }

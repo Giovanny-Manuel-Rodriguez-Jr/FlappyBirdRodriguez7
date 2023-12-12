@@ -7,7 +7,7 @@ using TMPro;
 
 public class GameControl : MonoBehaviour 
 {
-    public static GameControl Instance;
+    public static GameControl instance;
     public GameObject gameOverText;
     public TextMeshProUGUI ScoreText;
     public Text scoreText;
@@ -20,11 +20,11 @@ public class GameControl : MonoBehaviour
     // Start is called before the first frame update
     void Awake ()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
         }
-        else if (Instance != this)
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
@@ -46,7 +46,8 @@ public class GameControl : MonoBehaviour
             return;
         }
         score++;
-        scoreText.text = "Score: " + score.ToString();
+        ScoreText.text = "Score: " + score.ToString();
+        Debug.Log("I Should Be Scoring");
     }
 
     public void BirdDied()
